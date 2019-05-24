@@ -40,6 +40,7 @@ function GetIntent($msg)
             if (mb_strpos($msg, $keyword) !== false) 
             {
                 $result = $item['gsx$intent']['$t'];
+                return $result;
             }
         }
     }
