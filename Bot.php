@@ -90,17 +90,22 @@ foreach ($client->parseEvents() as $event) {
                             break;
                         
                         default:
-                            $replyMsg = array(
-                                array(
-                                    'type' => 'text',
-                                    'text' => "我聽不太懂...",
-                                ),
-                                array(
-                                    'type' => 'text',
-                                    'text' => "或許你可以試試↓↓",
-                                    'quickReply' => QuickHelp()
-                                )
-                            );
+                            if ($message['text'] != "什麼！？ Promote Bot 還會發優惠券？" &&
+                                $message['text'] != "聽說有優惠券可以拿！？" &&
+                                $message['text'] != "把優惠券什麼的交出來") 
+                            {
+                                $replyMsg = array(
+                                    array(
+                                        'type' => 'text',
+                                        'text' => "我聽不太懂...",
+                                    ),
+                                    array(
+                                        'type' => 'text',
+                                        'text' => "或許你可以試試↓↓",
+                                        'quickReply' => QuickHelp()
+                                    )
+                                );
+                            }
                             break;
                     }
                     break;

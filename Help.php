@@ -40,6 +40,14 @@ function QuickHelp()
                     'label' => '看看作品',
                     'text' => RandomHelpPortfolio()
                 )
+            ),
+            array(
+                'type' => 'action',
+                'action' => array(
+                    'type' => 'message',
+                    'label' => '拿個優惠券(?)',
+                    'text' => RandomHelpCoupon()
+                )
             )
         )
     );
@@ -74,6 +82,17 @@ function RandomHelpPortfolio()
         "給我看看你有哪些作品",
         "有作品集可以看嗎？",
         "秀一下你的作品吧"
+    );
+    $seed = rand(0, sizeof($re)-1);
+    return $re[$seed];
+}
+
+function RandomHelpCoupon()
+{
+    $re = array(
+        "什麼！？ Promote Bot 還會發優惠券？",
+        "聽說有優惠券可以拿！？",
+        "把優惠券什麼的交出來"
     );
     $seed = rand(0, sizeof($re)-1);
     return $re[$seed];
