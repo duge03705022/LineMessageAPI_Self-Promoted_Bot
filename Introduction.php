@@ -99,7 +99,7 @@ function GetIntroInfo($introType)
                 array(
                     'type' => 'text',
                     'text' => "目前一共投過三篇期刊，分別是：\n".
-                              "● RFIGrass:\n".
+                              "● RFIGlass:Modular Transparent Tangibles for Multi-Touch and Rich-ID Stackable Tangible Interactions\n".
                               "● RFTouchPads:Wireless Modular Touch Sensor Pads Based on RFID\n".
                               "● RFIWall:A Vertical Touchscreen That Supports Rich-ID Stacking",
                     'quickReply' => QuickIntro()
